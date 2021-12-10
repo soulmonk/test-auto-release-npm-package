@@ -1,5 +1,6 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+# This workflow will run tests using node and then publish a package to GitHub Packages when tag is pushed
+# Also, it will create release notes
+#
 
 name: Node.js Package
 
@@ -7,8 +8,24 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      version:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Semver type of new version (major / minor / patch)'
+        # Input has to be provided for the workflow to run
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +34,7 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-#       - run: npm test # disable
+      - run: npm test
 
   publish-npm:
     needs: build
