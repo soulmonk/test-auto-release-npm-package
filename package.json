@@ -1,5 +1,5 @@
 {
-  "name": "test-auto-release-npm-package",
+  "name": "@soulmonk-dev/test-auto-release-npm-package",
   "version": "0.0.1",
   "description": "Using git actions, release npm package and create release note",
   "main": "index.js",
