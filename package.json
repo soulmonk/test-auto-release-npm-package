@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/soulmonk/test-auto-release-npm-package/issues"
   },
-  "homepage": "https://github.com/soulmonk/test-auto-release-npm-package#readme"
+  "homepage": "https://github.com/soulmonk/test-auto-release-npm-package#readme",
+  "engines": {
+    "node": ">16.0.0"
+  }
 }
