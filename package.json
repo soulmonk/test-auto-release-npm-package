@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "files": [],
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "create-tag": "git checkout main && npm i && npm test && git tag v$(jq -r \".version\" package.json) main"
   },
   "repository": {
     "type": "git",
