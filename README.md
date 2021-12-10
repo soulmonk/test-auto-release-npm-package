@@ -7,6 +7,9 @@
 
 `npm publish --access public`
 
+## TODO
+`npm version minor --no-git-tag-version`
+
 # Links
 
 - Good example of workflows: https://github.com/MylesBorins/node-osc/tree/main/.github/workflows
