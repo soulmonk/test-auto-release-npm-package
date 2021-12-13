@@ -1,6 +1,26 @@
 # test-auto-release-npm-package
 
 
+# Flow
+
+## Manual / automatic
+
+- do tasks
+- before release create pr:
+  - `npm version minor --no-git-tag-version` with bumping
+- after merge bump release, trigger git action by running \
+`npm run create-tag` \
+it should switch to main, create tag based on version in package json and push it
+- wait and check create release after git action done )
+
+## To do it Automatic
+
+Update `npm-publish.yml` flow `on: push: branches: [ main ]`
+
+and then:
+- open pr
+- do not forget before marge to run `npm version minor` 
+
 # Q&A
 
 ## Cannot get access to private repository

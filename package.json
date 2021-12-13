@@ -1,12 +1,12 @@
 {
   "name": "@soulmonk-dev/test-auto-release-npm-package",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Using git actions, release npm package and create release note",
   "main": "src/index.js",
   "files": [],
   "scripts": {
     "test": "mocha",
-    "create-tag": "git checkout main && npm i && npm test && git tag v$(jq -r \".version\" package.json) main"
+    "create-tag": "git checkout main && npm i && npm test && git tag v$(jq -r \".version\" package.json) main && git push --tags"
   },
   "repository": {
     "type": "git",
