@@ -1,3 +1,3 @@
 module.exports = function () {
-	return 'test git actions'
+	return 'test git actions, after some update'
 };
