@@ -1,6 +1,13 @@
 # test-auto-release-npm-package
 
-# TODO how to implement
+# How to implement
+
+- copy `.github/workflows/npm-publish.yml` to your project, made some adjustments, if necessary
+  - dependency on test
+  - remove test flow if you have separate CI/CD for testing (with complicated)
+- set up secret for project `NPM_TOKEN`
+- every time you push a new tag it will create a new publishing
+
 
 # Flow
 
@@ -15,6 +22,8 @@ it should switch to main, create tag based on version in package json and push i
 - wait and check create release after git action done )
 
 ## To do it Automatic
+
+Note: Not all changes in the main branch can be triggered as a new publication
 
 Update `npm-publish.yml` flow `on: push: branches: [ main ]`
 
