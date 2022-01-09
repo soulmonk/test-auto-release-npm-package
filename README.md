@@ -15,7 +15,7 @@
 
 - do tasks
 - before release create pr:
-  - `npm version minor --no-git-tag-version` with bumping
+  - easy way `npm version minor --no-git-tag-version` with bumping
 - after merge bump release, trigger git action by running \
 `npm run create-tag` \
 it should switch to main, create tag based on version in package json and push it
