@@ -1,5 +1,6 @@
 # test-auto-release-npm-package
 
+# TODO how to implement
 
 # Flow
 
