@@ -6,7 +6,7 @@
   "files": [],
   "scripts": {
     "test": "mocha",
-    "create-tag": "git checkout main && npm i && npm test && git tag v$(jq -r \".version\" package.json) main && git push --tags"
+    "create-tag": "git checkout main && git pull && npm i && npm test && git tag v$(jq -r \".version\" package.json) main && git push --tags"
   },
   "repository": {
     "type": "git",
